@@ -13,6 +13,10 @@
 		C0C2CAC525C85B5700B359A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0C2CAC425C85B5700B359A1 /* Assets.xcassets */; };
 		C0C2CAC825C85B5700B359A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0C2CAC725C85B5700B359A1 /* Preview Assets.xcassets */; };
 		C0C2CACB25C85B5700B359A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C2CAC925C85B5700B359A1 /* LaunchScreen.storyboard */; };
+		C0C2CAD425C85BA200B359A1 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C2CAD325C85BA200B359A1 /* WebService.swift */; };
+		C0C2CAD725C85DA800B359A1 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C2CAD625C85DA800B359A1 /* Stock.swift */; };
+		C0C2CADE25C860E900B359A1 /* StockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C2CADD25C860E900B359A1 /* StockListViewModel.swift */; };
+		C0C2CAE125C8611E00B359A1 /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C2CAE025C8611E00B359A1 /* StockViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C0C2CAC725C85B5700B359A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C0C2CACA25C85B5700B359A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0C2CACC25C85B5700B359A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0C2CAD325C85BA200B359A1 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		C0C2CAD625C85DA800B359A1 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		C0C2CADD25C860E900B359A1 /* StockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewModel.swift; sourceTree = "<group>"; };
+		C0C2CAE025C8611E00B359A1 /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				C0C2CABE25C85B5600B359A1 /* AppDelegate.swift */,
+				C0C2CADB25C85FB800B359A1 /* Models */,
 				C0C2CAC025C85B5600B359A1 /* SceneDelegate.swift */,
+				C0C2CAD925C85FAC00B359A1 /* Service */,
 				C0C2CAC225C85B5600B359A1 /* ContentView.swift */,
+				C0C2CADD25C860E900B359A1 /* StockListViewModel.swift */,
+				C0C2CAE025C8611E00B359A1 /* StockViewModel.swift */,
 				C0C2CAC425C85B5700B359A1 /* Assets.xcassets */,
 				C0C2CAC925C85B5700B359A1 /* LaunchScreen.storyboard */,
 				C0C2CACC25C85B5700B359A1 /* Info.plist */,
@@ -73,6 +85,22 @@
 				C0C2CAC725C85B5700B359A1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C0C2CAD925C85FAC00B359A1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C0C2CAD325C85BA200B359A1 /* WebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C0C2CADB25C85FB800B359A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0C2CAD625C85DA800B359A1 /* Stock.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0C2CABF25C85B5600B359A1 /* AppDelegate.swift in Sources */,
+				C0C2CADE25C860E900B359A1 /* StockListViewModel.swift in Sources */,
 				C0C2CAC125C85B5600B359A1 /* SceneDelegate.swift in Sources */,
+				C0C2CAD425C85BA200B359A1 /* WebService.swift in Sources */,
+				C0C2CAD725C85DA800B359A1 /* Stock.swift in Sources */,
 				C0C2CAC325C85B5600B359A1 /* ContentView.swift in Sources */,
+				C0C2CAE125C8611E00B359A1 /* StockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
