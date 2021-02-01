@@ -7,9 +7,23 @@
 
 import Foundation
 
-class StockListViewModel {
+class StockListViewModel: ObservableObject {
     //created a search property 
     var searchTerm: String = ""
     //created an array of a stock view list
-    var stocks: [StockViewModel] = [StockViewModel]()
+    @Published var stocks: [StockViewModel] = [StockViewModel]()
+    
+    func load() {
+     fetchStocks()
+    }
+    //calls data from webserver on main thread and maps it to stock view model
+    private func fetchStocks() {
+        WebService().getStocks { stocks in
+            if let stocks = stocks {
+                DispatchQueue.main.async {
+                    self.stocks = stocks.map(StockViewModel.init)
+                }
+            }
+        }
+    }
 }
