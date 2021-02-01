@@ -10,6 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var searchTerm: String = ""
+    
+    init() {
+        UINavigationBar.appearance().backgroundColor = UIColor.black
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UITableView.appearance().backgroundColor = UIColor.black
+        UITableViewCell.appearance().backgroundColor = UIColor.black
+    }
     var body: some View {
         NavigationView{
             ZStack(alignment: .leading){
