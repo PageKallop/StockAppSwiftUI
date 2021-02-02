@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct StockListView: View {
     let stocks : [StockViewModel]
     var body: some View {
+     
         List(self.stocks, id: \.symbol) { stock in
             StockCellView(stock: stock)
                 .background(Color.black)
+      
         }
     }
     

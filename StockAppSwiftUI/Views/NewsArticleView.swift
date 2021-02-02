@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct NewsArticleView: View {
    
@@ -37,6 +38,14 @@ struct NewsArticleView: View {
                                         .font(.custom("Arial", size: 22))
                                         .foregroundColor(.white)
                                 }
+                               Spacer()
+                               
+                                URLImage(url: URL(string: article.imageURL)!,
+                                    content: {
+                                        article in article
+                                    .resizable()})
+                                    .frame(width: 100, height: 100)
+                               
                             }
                         }
                     }
@@ -51,7 +60,7 @@ struct NewsArticleView: View {
 struct NewsArticleView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let article = Article(title: "News", imageURL: "https://media.wired.com/photos/5932a86652d99d6b984dfec4/191:100/w_1280,c_limit/peacock-eye-feathers-flickr-ozgurmulazimoglu.jpg", publication: "pub")
+        let article = Article(title: "News", imageURL: "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f2c667737950e6bf2338de1%2F0x0.jpg", publication: "pub")
         
        return NewsArticleView(newsArticles: [NewsArticleViewModel(article: article)])
     }

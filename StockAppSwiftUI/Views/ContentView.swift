@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct ContentView: View {
     
@@ -38,12 +39,12 @@ struct ContentView: View {
                     .offset(y: 250)
                 SearchView(searchTerm: self.$stockListVM.searchTerm)
                     .offset(y: -290)
-                NewsArticleView(newsArticles: stockListVM.news)
+                NewsArticleView(newsArticles: self.stockListVM.news)
                     .offset(y: 500)
-                    
-            }
+          
             .navigationBarTitle("Stocks")
         }.edgesIgnoringSafeArea(Edge.Set([.bottom]))
+        }
         
     }
 }
@@ -52,4 +53,4 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
+} 

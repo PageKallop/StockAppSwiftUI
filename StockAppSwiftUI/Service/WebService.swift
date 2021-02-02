@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import URLImage
 
 class WebService {
     
@@ -25,6 +26,9 @@ class WebService {
             DispatchQueue.main.async {
                 completion(articles)
             }
+          
+
+            
         }.resume()
     
     }
