@@ -14,7 +14,8 @@ struct StockListView: View {
      
         List(self.stocks, id: \.symbol) { stock in
             StockCellView(stock: stock)
-                .background(Color.black)
+                .padding()
+               
       
         }
     }
@@ -27,8 +28,6 @@ struct StockCellView: View {
     
     var body: some View {
   
-        Color.black
-            .edgesIgnoringSafeArea(.all)
         return HStack {
         
             VStack(alignment: .leading) {
@@ -54,8 +53,8 @@ struct StockCellView: View {
                 .foregroundColor(Color.white)
                 .cornerRadius(6)
             }
-        }.background(Color.black)
-        .ignoresSafeArea()
+        }
+        
     }
 }
 
